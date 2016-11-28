@@ -33,5 +33,5 @@ z.Zt gibt es per [hopglass-server/alias.json](hopglass-server/alias.json) eine M
 
 Zur Zeit ist diese map anzuschauen unter: https://hopglass.ffm.freifunk.net/
 
-## Anleitung
+## Anleitungen
 https://libraries.io/github/hopglass/hopglass-server
