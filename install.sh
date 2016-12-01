@@ -11,7 +11,7 @@ apt install nodejs npm ruby-sass prometheus grafana nginx
 
 wget https://raw.githubusercontent.com/plumpudding/hopglass-server/v0.1.3/scripts/bootstrap.sh; bash bootstrap.sh; rm bootstrap.sh
 # this step assumes that you have a bat0 interface. Otherwise change the config.json accordingly (e.g. to "br0")
-cp hopglass-server/*.json /etc/hopglass-server/default/
+cp ./hopglass-server/*.json /etc/hopglass-server/default/
 systemctl start hopglass-server@default
 systemctl enable hopglass-server@default
 
@@ -24,22 +24,22 @@ npm install
 npm install grunt-cli
 node_modules/.bin/grunt
 popd
-cp hopglass/config.json /opt/hopglass/hopglass/build/
+cp ./hopglass/config.json /opt/hopglass/hopglass/build/
 
 #### GRAFANA & PROMETHEUS ####
 
-cp grafana/grafana.ini /etc/grafana/
+cp ./grafana/grafana.ini /etc/grafana/
 systemctl enable grafana-server
 systemctl start grafana-server
 
-cp prometheus/prometheus /etc/default/
-cp prometheus/prometheus.yml /etc/prometheus/
+cp ./prometheus/prometheus /etc/default/
+cp ./prometheus/prometheus.yml /etc/prometheus/
 systemctl enable prometheus
 systemctl start prometheus
 
 # you need an ip6 "::1" localhost entry in /etc/hosts as /hopglass is not listening on v4
-cp nginx/default /etc/nginx/sites-available/
-cp nginx/hopglass.ffm.freifunk.net.conf /etc/nginx/sites-available/
+cp ./nginx/default /etc/nginx/sites-available/
+cp ./nginx/hopglass.ffm.freifunk.net.conf /etc/nginx/sites-available/
 ln -s /etc/nginx/sites-available/hopglass.ffm.freifunk.net.conf /etc/nginx/sites-enabled/hopglass.ffm.freifunk.net.conf
 systemctl reload nginx
 
