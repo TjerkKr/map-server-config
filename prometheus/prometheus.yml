@@ -35,12 +35,12 @@ scrape_configs:
     # machine by default.
     target_groups:
       - targets: ['localhost:9100']
-      - targets: ['10.126.0.2:9100'] # UBER!
-      - targets: ['10.126.0.3:9100']
-      - targets: ['10.126.8.1:9100']
-      - targets: ['10.126.16.1:9100']
-      - targets: ['10.126.24.1:9100']
-      - targets: ['10.126.32.1:9100']
+#      - targets: ['10.126.0.2:9100'] # UBER!
+#      - targets: ['10.126.0.3:9100']
+#      - targets: ['10.126.8.1:9100']
+#      - targets: ['10.126.16.1:9100']
+#      - targets: ['10.126.24.1:9100']
+#      - targets: ['10.126.32.1:9100']
 
   - job_name: 'node_map'
     scrape_interval: 60s
