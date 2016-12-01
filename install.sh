@@ -39,8 +39,8 @@ systemctl start prometheus
 
 # you need an ip6 "::1" localhost entry in /etc/hosts as /hopglass is not listening on v4
 cp ./nginx/default /etc/nginx/sites-available/
-cp ./nginx/karte.freifunk-flenburg.de.conf /etc/nginx/sites-available/
-ln -s /etc/nginx/sites-available/karte.freifunk-flenburg.de.conf /etc/nginx/sites-enabled/karte.freifunk-flenburg.de.conf
+cp ./nginx/karte.freifunk-flensburg.de.conf /etc/nginx/sites-available/
+ln -s /etc/nginx/sites-available/karte.freifunk-flensburg.de.conf /etc/nginx/sites-enabled/karte.freifunk-flensburg.de.conf
 systemctl reload nginx
 
 # now add http://localhost:9090/ as default prometheus datasource in the grafana webinterface under http://<host>/grafana
