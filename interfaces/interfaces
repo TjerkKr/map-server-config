@@ -1,0 +1,63 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto ens18
+iface ens18 inet static
+        address 10.0.0.7
+        netmask 255.0.0.0
+        network 10.0.0.0
+        broadcast 10.255.255.255
+        gateway 10.254.254.254
+        # dns-* options are implemented by the resolvconf package, if installed
+        dns-nameservers 8.8.8.8
+        dns-search freifunk-flensburg.de
+
+auto ens19
+iface ens19 inet dhcp
+
+
+
+
+auto br-fffl
+
+iface br-fffl inet static
+
+address 10.129.2.55
+netmask 255.255.0.0
+gateway 10.129.1.1
+
+bridge-ports none
+
+
+
+
+iface br-fffl inet6 static
+
+address fdf0:f9e:d2f8::/64
+
+
+
+
+
+allow-hotplug bat0
+
+iface bat0 inet6 manual
+
+
+pre-up /sbin/ip link set dev $IFACE master br-fffl
+
+pre-up /usr/sbin/batctl -m $IFACE it 5000
+
+up /sbin/ip link set dev $IFACE up
+
+down /sbin/ip link set dev $IFACE down
+
+post-down /sbin/ip link set dev $IFACE nomaster || true
+
