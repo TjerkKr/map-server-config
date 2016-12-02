@@ -25,13 +25,25 @@ Diskussion: https://github.com/freifunk-ffm/map-server-config/issues/2
 
 Zukünftig könnten wir über die Verwendung von https://github.com/ffnord/ffnord-alfred-announce nachdenken, welches als respondd client auf den Supernodes läuft und diese damit "automatisch" über den hopglass-server auf die Karte bringt.
 
-## FFFFM-features
-
-z.Zt gibt es per [hopglass-server/alias.json](hopglass-server/alias.json) eine MAC-basierte differenzierte Visualisierung der je zwei verwendeten fastd Instanzen pro supernode.
 
 ## Live
 
-Zur Zeit ist diese map anzuschauen unter: https://hopglass.ffm.freifunk.net/
+Zur Zeit ist diese map anzuschauen unter: https://karte.freifunk-flensburg.de/
 
 ## Anleitungen
 https://libraries.io/github/hopglass/hopglass-server
+
+
+#fastd 
+fastd.conf muss nach /etc/fastd/_username_der_fastd_startet_/
+secret in die fastd.conf eintragen
+
+autostart mit systemd:
+fastd@.service ---> /lib/systemd/system/fastd@.service
+systemctl enable fastd@root.service
+
+#batman compat14 version 2013.4 erzwingen
+dkms remove batman-adv/2013.4.0 --all
+dkms --force install batman-adv/2013.4.0
+batman-adv ---> /etc/modules
+
