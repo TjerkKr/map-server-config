@@ -36,14 +36,19 @@ https://libraries.io/github/hopglass/hopglass-server
 
 #fastd 
 fastd.conf muss nach /etc/fastd/_username_der_fastd_startet_/
+
 secret in die fastd.conf eintragen
 
 autostart mit systemd:
+
 fastd@.service ---> /lib/systemd/system/fastd@.service
+
 systemctl enable fastd@root.service
 
 #batman compat14 version 2013.4 erzwingen
 dkms remove batman-adv/2013.4.0 --all
+
 dkms --force install batman-adv/2013.4.0
+
 batman-adv ---> /etc/modules
 
