@@ -34,7 +34,8 @@ Zur Zeit ist diese map anzuschauen unter: https://karte.freifunk-flensburg.de/
 https://libraries.io/github/hopglass/hopglass-server
 
 
-#fastd 
+#fastd
+user der fastd ausführt muss netzwerkschnittstellen erstellen können(zb root)
 fastd.conf muss nach /etc/fastd/_username_der_fastd_startet_/
 
 secret in die fastd.conf eintragen
@@ -43,7 +44,7 @@ autostart mit systemd:
 
 fastd@.service ---> /lib/systemd/system/fastd@.service
 
-systemctl enable fastd@root.service
+systemctl enable fastd@_username_der_fastd_startet_.service
 
 #batman compat14 version 2013.4 erzwingen
 dkms remove batman-adv/2013.4.0 --all
