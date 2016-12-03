@@ -53,3 +53,46 @@ batman-adv ---> /etc/modules
 ##webserver kopieren
 
 /opt/hopglass/hopglass/build/* kopieren nach /var/www/html
+
+
+##Prometheus und Grafana einrichten
+
+#Prometheus und Grafana Webinterface einrichten:
+
+Prometheus: http://localhost:9090
+
+Grafana: http(s)://localhost:3000 oder  http(s)://localhost/grafana
+
+http://localhost/grafana/login
+
+default login: admin und Passwort: admin
+
+https://localhost/grafana/datasources
+
+https://localhost/grafana/datasources/new
+
+
+
+Name: prometheus
+
+Default (harken)
+
+Type: Prometheus
+
+Url: http://127.0.0.1:9090/
+
+Http Auth: Basic Auth ( ) With Credentials ( )
+
+klicke auf Test Connection
+
+Test results
+Success
+Data source is working
+
+Wenn alles Grün ist klicken wir auf ,,Save"
+
+
+
+
+
+
