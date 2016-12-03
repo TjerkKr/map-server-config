@@ -36,6 +36,10 @@ fastd.conf muss nach /etc/fastd/_username_der_fastd_startet_/
 
 secret in die fastd.conf eintragen
 
+In den "on up" Bereich für $INTERFACE und bat0 Mac-Adresse generieren und einfügen.
+
+
+
 autostart mit systemd:
 
 fastd@.service ---> /lib/systemd/system/fastd@.service
@@ -44,9 +48,28 @@ systemctl enable fastd@_username_der_fastd_startet_.service
 
 ##batman compat14 version 2013.4 erzwingen
 
+echo "deb http://repo.universe-factory.net/debian/ sid main" >>/etc/apt/sources.list
+
+apt-get install apt-transport-https
+
+gpg --keyserver pgpkeys.mit.edu --recv-key  16EF3F64CB201D9C
+
+gpg -a --export 16EF3F64CB201D9C | apt-key add -
+
+apt-get update
+
+modinfo batman-adv (Batman Version prüfen)
+
+apt-get install batman-adv-dkms
+
 dkms remove batman-adv/2013.4.0 --all
 
 dkms --force install batman-adv/2013.4.0
+
+modprobe batman-adv (falls falsche Version "rmmod batman-adv" und dann noch mal die beiden dkms befehle)
+
+dmesg (Kontrolle ob geladen und welche Version)
+
 
 batman-adv ---> /etc/modules
 
