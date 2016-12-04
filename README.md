@@ -115,6 +115,12 @@ Data source is working
 Wenn alles Grün ist klicken wir auf ,,Save"
 
 
+##Grafana Dashboard Importieren
+Auf ,,Home" klicken und hatt man eine uebersicht über die Dashboards und klickt auf ,,Importieren"
+
+Nun aauf ,,Durchsuchen..." klicken und eine die Datei auswählen und rechts unten auf den Grünen boutton ,,Import" klicken.
+
+Oben in der in der Grauen Leiste sollte nun ein Unsichtbare Katorie erscheinen und dort sollte nun ,,save Dashboard" stehen.
 
 
 
