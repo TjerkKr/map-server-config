@@ -4,7 +4,7 @@
   ],
   "siteName": "Freifunk Flensburg",
   "mapSigmaScale": 0.5,
-  "showContact": true,
+  "showContact": false,
   "maxAge": 7,
   "mapLayers": [
     { "name": "OpenStreetMap.HOT" },
