@@ -1,16 +1,62 @@
 {
-"02ff1f107d01": {"firstseen":"2016-02-02T17:49:18.252Z","flags":{"client": true,"gateway": true, "online": true},"nodeinfo": {"owner": {"contact": "Igor / admin@ffm.freifunk.net"},     "node_id": "02ff1f107d01","network": {"mac": "02:ff:1f:10:7d:01","mesh_interfaces":["02:ff:1f:10:7d:01"],"addresses":["10.126.0.3"], "mesh":{"bat0":{"interfaces":{"other":["02:ff:1f:10:7d:01"]}}}},"hostname":"fastd1.ffffm",        "hardware":{"model":"VM","nproc":2},"software":{"batman-adv":{"compat": 14,"version": "2013.4"},"fastd":{"enabled": true},"firmware":{"base": "debian","release": "jessie"}},"system":{"site_code": "ffffm"}},"neighbours":{"batadv":{"02:ff:1f:10:7d:01":{"neighbours":{"02:ff:2f:10:7d:01":{"tq":255,"lastseen":4.3}}}}}},
-"02ff2f107d01": {"firstseen":"2016-02-02T17:49:18.252Z","flags":{"client": true,"gateway": false,"online": true},"nodeinfo": {"owner": {"contact": "Igor / admin@ffm.freifunk.net"},     "node_id": "02ff2f107d01","network": {"mac": "02:ff:2f:10:7d:01","mesh_interfaces":["02:ff:2f:10:7d:01"],"addresses":["10.126.0.3"], "mesh":{"bat0":{"interfaces":{"other":["02:ff:2f:10:7d:01"]}}}},"hostname":"highmtu.fastd1.ffffm","hardware":{"model":"VM","nproc":2},"software":{"batman-adv":{"compat": 14,"version": "2013.4"},"fastd":{"enabled": true},"firmware":{"base": "debian","release": "jessie"}},"system":{"site_code": "ffffm"}},"neighbours":{"batadv":{"02:ff:2f:10:7d:01":{"neighbours":{"02:ff:1f:10:7d:01":{"tq":255,"lastseen":4.3}}}}}},
-
-"02ff1f107d02": {"firstseen":"2016-02-02T17:49:18.252Z","flags":{"client": true,"gateway": true, "online": true},"nodeinfo": {"owner": {"contact": "Jan / admin@ffm.freifunk.net"},      "node_id": "02ff1f107d02","network": {"mac": "02:ff:1f:10:7d:02","mesh_interfaces":["02:ff:1f:10:7d:02"],"addresses":["10.126.8.3"], "mesh":{"bat0":{"interfaces":{"other":["02:ff:1f:10:7d:02"]}}}},"hostname":"fastd2.ffffm",        "hardware":{"model":"VM","nproc":2},"software":{"batman-adv":{"compat": 14,"version": "2013.4"},"fastd":{"enabled": true},"firmware":{"base": "debian","release": "jessie"}},"system":{"site_code": "ffffm"}},"neighbours":{"batadv":{"02:ff:1f:73:7d:02":{"neighbours":{"02:ff:2f:73:7d:02":{"tq":255,"lastseen":4.3}}}}}},
-"02ff2f107d02": {"firstseen":"2016-02-02T17:49:18.252Z","flags":{"client": true,"gateway": false,"online": true},"nodeinfo": {"owner": {"contact": "Jan / admin@ffm.freifunk.net"},      "node_id": "02ff2f107d02","network": {"mac": "02:ff:2f:10:7d:02","mesh_interfaces":["02:ff:2f:10:7d:02"],"addresses":["10.126.8.3"], "mesh":{"bat0":{"interfaces":{"other":["02:ff:2f:10:7d:02"]}}}},"hostname":"highmtu.fastd2.ffffm","hardware":{"model":"VM","nproc":2},"software":{"batman-adv":{"compat": 14,"version": "2013.4"},"fastd":{"enabled": true},"firmware":{"base": "debian","release": "jessie"}},"system":{"site_code": "ffffm"}},"neighbours":{"batadv":{"02:ff:2f:73:7d:02":{"neighbours":{"02:ff:1f:73:7d:02":{"tq":255,"lastseen":4.3}}}}}},
-
-"02ff1f817d03": {"firstseen":"2016-02-02T17:49:18.252Z","flags":{"client": true,"gateway": true, "online": true},"nodeinfo": {"owner": {"contact": "Christof / admin@ffm.freifunk.net"}, "node_id": "02ff1f817d03","network": {"mac": "02:ff:1f:81:7d:03","mesh_interfaces":["02:ff:1f:81:7d:03"],"addresses":["10.126.16.1"],"mesh":{"bat0":{"interfaces":{"other":["02:ff:1f:81:7d:03"]}}}},"hostname":"fastd3.ffffm",        "hardware":{"model":"VM","nproc":2},"software":{"batman-adv":{"compat": 14,"version": "2013.4"},"fastd":{"enabled": true},"firmware":{"base": "debian","release": "jessie"}},"system":{"site_code": "ffffm"}},"neighbours":{"batadv":{"02:ff:1f:81:7d:03":{"neighbours":{"02:ff:2f:81:7d:03":{"tq":255,"lastseen":4.3}}}}}},
-"02ff2f817d03": {"firstseen":"2016-02-02T17:49:18.252Z","flags":{"client": true,"gateway": false,"online": true},"nodeinfo": {"owner": {"contact": "Christof / admin@ffm.freifunk.net"}, "node_id": "02ff2f817d03","network": {"mac": "02:ff:2f:81:7d:03","mesh_interfaces":["02:ff:2f:81:7d:03"],"addresses":["10.126.16.1"],"mesh":{"bat0":{"interfaces":{"other":["02:ff:2f:81:7d:03"]}}}},"hostname":"highmtu.fastd3.ffffm","hardware":{"model":"VM","nproc":2},"software":{"batman-adv":{"compat": 14,"version": "2013.4"},"fastd":{"enabled": true},"firmware":{"base": "debian","release": "jessie"}},"system":{"site_code": "ffffm"}},"neighbours":{"batadv":{"02:ff:2f:81:7d:03":{"neighbours":{"02:ff:1f:81:7d:03":{"tq":255,"lastseen":4.3}}}}}},
-
-"02ff1f307d04": {"firstseen":"2016-02-02T17:49:18.252Z","flags":{"client": true,"gateway": true, "online": true},"nodeinfo": {"owner": {"contact": "Elmar / admin@ffm.freifunk.net"},    "node_id": "02ff1f307d04","network": {"mac": "02:ff:1f:30:7d:04","mesh_interfaces":["02:ff:1f:30:7d:04"],"addresses":["10.126.24.1"],"mesh":{"bat0":{"interfaces":{"other":["02:ff:1f:30:7d:04"]}}}},"hostname":"fastd4.ffffm",        "hardware":{"model":"VM","nproc":2},"software":{"batman-adv":{"compat": 14,"version": "2013.4"},"fastd":{"enabled": true},"firmware":{"base": "debian","release": "jessie"}},"system":{"site_code": "ffffm"}},"neighbours":{"batadv":{"02:ff:1f:30:7d:04":{"neighbours":{"02:ff:2f:30:7d:04":{"tq":255,"lastseen":4.3}}}}}},
-"02ff2f307d04": {"firstseen":"2016-02-02T17:49:18.252Z","flags":{"client": true,"gateway": false,"online": true},"nodeinfo": {"owner": {"contact": "Elmar / admin@ffm.freifunk.net"},    "node_id": "02ff2f307d04","network": {"mac": "02:ff:2f:30:7d:04","mesh_interfaces":["02:ff:2f:30:7d:04"],"addresses":["10.126.24.1"],"mesh":{"bat0":{"interfaces":{"other":["02:ff:2f:30:7d:04"]}}}},"hostname":"highmtu.fastd4.ffffm","hardware":{"model":"VM","nproc":2},"software":{"batman-adv":{"compat": 14,"version": "2013.4"},"fastd":{"enabled": true},"firmware":{"base": "debian","release": "jessie"}},"system":{"site_code": "ffffm"}},"neighbours":{"batadv":{"02:ff:2f:30:7d:04":{"neighbours":{"02:ff:1f:30:7d:04":{"tq":255,"lastseen":4.3}}}}}},
-
-"02ff1f017d05": {"firstseen":"2016-02-02T17:49:18.252Z","flags":{"client": true,"gateway": true, "online": true},"nodeinfo": {"owner": {"contact": "Dominik / admin@ffm.freifunk.net"},  "node_id": "02ff1f017d05","network": {"mac": "02:ff:1f:01:7d:05","mesh_interfaces":["02:ff:1f:01:7d:05"],"addresses":["10.126.32.1"],"mesh":{"bat0":{"interfaces":{"other":["02:ff:1f:01:7d:05"]}}}},"hostname":"fastd5.ffffm",        "hardware":{"model":"VM","nproc":1},"software":{"batman-adv":{"compat": 14,"version": "2013.4"},"fastd":{"enabled": true},"firmware":{"base": "debian","release": "jessie"}},"system":{"site_code": "ffffm"}},"neighbours":{"batadv":{"02:ff:1f:01:7d:05":{"neighbours":{"02:ff:2f:01:7d:05":{"tq":255,"lastseen":4.3}}}}}},
-"02ff2f017d05": {"firstseen":"2016-02-02T17:49:18.252Z","flags":{"client": true,"gateway": false,"online": true},"nodeinfo": {"owner": {"contact": "Dominik / admin@ffm.freifunk.net"},  "node_id": "02ff2f017d05","network": {"mac": "02:ff:2f:01:7d:05","mesh_interfaces":["02:ff:2f:01:7d:05"],"addresses":["10.126.32.1"],"mesh":{"bat0":{"interfaces":{"other":["02:ff:2f:01:7d:05"]}}}},"hostname":"highmtu.fastd5.ffffm","hardware":{"model":"VM","nproc":1},"software":{"batman-adv":{"compat": 14,"version": "2013.4"},"fastd":{"enabled": true},"firmware":{"base": "debian","release": "jessie"}},"system":{"site_code": "ffffm"}},"neighbours":{"batadv":{"02:ff:2f:01:7d:05":{"neighbours":{"02:ff:1f:01:7d:05":{"tq":255,"lastseen":4.3}}}}}}
+	"feeddeadbe02": {
+		"firstseen": "2016-04-07T17:49:18.252Z",
+		"nodeinfo": {
+			"node_id": "feeddeadbe02",
+			"owner": {
+				"contact": "admin@freifunk-flensburg"
+			},
+			"network": {
+				"mac": "fe:ed:de:ad:be:02",
+				"mesh_interfaces": [
+					"fe:ed:de:ad:be:02"
+				],
+				"mesh": {
+					"bat0": {
+						"interfaces": {
+							"tunnel": [
+								"fe:ed:de:ad:be:02"
+							]
+						}
+					}
+				}
+			},
+			"hostname": "gw02"
+		},
+		"neighbours": {
+			"batadv": {
+				"fe:ed:de:ad:be:02": {}
+			}
+		}
+	},
+	"9e998175b561": {
+		"firstseen": "2016-04-07T17:49:18.252Z",
+		"nodeinfo": {
+			"node_id": "9e998175b561",
+			"owner": {
+				"contact": "admin@freifunk-flensburg.de"
+			},
+			"network": {
+				"mac": "9e:99:81:75:b5:61",
+				"mesh_interfaces": [
+					"9e:99:81:75:b5:61"
+				],
+				"mesh": {
+					"bat0": {
+						"interfaces": {
+							"tunnel": [
+								"9e:99:81:75:b5:61"
+							]
+						}
+					}
+				}
+			},
+			"hostname": "snowden"
+		},
+		"neighbours": {
+			"batadv": {
+				"9e:99:81:75:b5:61": {}
+			}
+		}
+	}
 }
