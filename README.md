@@ -28,9 +28,13 @@ sudo ln -s /lib/systemd/system/grafana-server.service /etc/systemd/system/grafan
 
 ## grafana login webinterface problem 
 falls admin zugang nicht funktioniert
+
 kurzzeitig grafana.ini ---> 
+
 [auth.anonymous]
+
 #org_role = Viewer
+
 org_role = Admin
 
 
