@@ -94,23 +94,23 @@ batman-adv ---> /etc/modules
 
 ## Prometheus und Grafana einrichten
 
-# für neuere grafana+prometheus
+##für neuere grafana+prometheus
 
 http://grafana.org/download/
 
-[https://packages.debian.org/testing/net/prometheus prometheus]
-[https://packages.debian.org/testing/net/prometheus-node-exporter prometheus-node-exporter]
-[https://packages.debian.org/testing/net/libjs-jquery libjs-jquery]
-[https://packages.debian.org/testing/net/libjs-moment libjs-moment]
-[https://packages.debian.org/testing/net/libjs-eonasdan-bootstrap-datetimepicker libjs-eonasdan-bootstrap-datetimepicker]
+https://packages.debian.org/testing/net/prometheus 
+https://packages.debian.org/testing/net/prometheus-node-exporter
+https://packages.debian.org/testing/net/libjs-jquery
+https://packages.debian.org/testing/net/libjs-moment
+https://packages.debian.org/testing/net/libjs-eonasdan-bootstrap-datetimepicker
 
 
-# systemd autostart
+## systemd autostart
 systemctl enable grafana-server
 systemctl enable prometheus
 
 
-# Prometheus und Grafana Webinterface einrichten:
+## Prometheus und Grafana Webinterface einrichten:
 
 Prometheus: http://localhost:9090
 
@@ -128,7 +128,7 @@ https://localhost/grafana/datasources/new
 
 Name: prometheus
 
-Default (harken)
+Default (haken setzen)
 
 Type: Prometheus
 
@@ -150,7 +150,7 @@ Auf ,,Home" klicken und hatt man eine uebersicht über die Dashboards und klickt
 
 Nun auf ,,Durchsuchen..." klicken und eine die Datei auswählen und rechts unten auf den Grünen boutton ,,Import" klicken.
 
-in älteren graphanas sollte oben in der in der Grauen Leiste nun eine Unsichtbare Katorie erscheinen und dort sollte nun ,,save Dashboard" stehen.
+In älteren graphanas sollte oben in der in der Grauen Leiste nun eine Unsichtbare Katorie erscheinen und dort sollte nun ,,save Dashboard" stehen.
 
 
 
