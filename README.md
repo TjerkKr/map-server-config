@@ -16,16 +16,22 @@ Die angepassten configs finden sich in den jeweiligen Unterverzeichnissen.
 
 ## Issues
 
-#hopglass-server
+# hopglass-server
 Zur Zeit müssen ggf. die MAC Adressen der Supernodes nach einer Änderung händisch in den hopglass-server eingepflegt werden. Dies funktioniert über die Datei [hopglass-server/alias.json](hopglass-server/alias.json)
 
-#grafana und systemd
+# grafana und systemd
 bei problemen mit grafana autostart über systemd
 
 /lib/systemd/system/grafana-server.service von https://github.com/grafana/grafana/blob/master/packaging/deb/systemd/grafana-server.service holen
 und
 sudo ln -s /lib/systemd/system/grafana-server.service /etc/systemd/system/grafana-server.service
 
+# grafana login webinterface problem 
+falls admin zugang nicht funktioniert
+kurzzeitig grafana.ini ---> 
+[auth.anonymous]
+#org_role = Viewer
+org_role = Admin
 
 
 ## Live
@@ -88,6 +94,22 @@ batman-adv ---> /etc/modules
 
 ##Prometheus und Grafana einrichten
 
+#für neuere grafana+prometheus
+
+http://grafana.org/download/
+
+[https://packages.debian.org/testing/net/prometheus prometheus]
+[https://packages.debian.org/testing/net/prometheus-node-exporter prometheus-node-exporter]
+[https://packages.debian.org/testing/net/libjs-jquery libjs-jquery]
+[https://packages.debian.org/testing/net/libjs-moment libjs-moment]
+[https://packages.debian.org/testing/net/libjs-eonasdan-bootstrap-datetimepicker libjs-eonasdan-bootstrap-datetimepicker]
+
+
+#systemd autostart
+systemctl enable grafana-server
+systemctl enable prometheus
+
+
 #Prometheus und Grafana Webinterface einrichten:
 
 Prometheus: http://localhost:9090
@@ -126,9 +148,9 @@ Wenn alles Grün ist klicken wir auf ,,Save"
 ##Grafana Dashboard Importieren
 Auf ,,Home" klicken und hatt man eine uebersicht über die Dashboards und klickt auf ,,Importieren"
 
-Nun aauf ,,Durchsuchen..." klicken und eine die Datei auswählen und rechts unten auf den Grünen boutton ,,Import" klicken.
+Nun auf ,,Durchsuchen..." klicken und eine die Datei auswählen und rechts unten auf den Grünen boutton ,,Import" klicken.
 
-Oben in der in der Grauen Leiste sollte nun ein Unsichtbare Katorie erscheinen und dort sollte nun ,,save Dashboard" stehen.
+in älteren graphanas sollte oben in der in der Grauen Leiste nun eine Unsichtbare Katorie erscheinen und dort sollte nun ,,save Dashboard" stehen.
 
 
 
