@@ -43,7 +43,7 @@ Zur Zeit ist diese map anzuschauen unter: https://karte.freifunk-flensburg.de/
 https://libraries.io/github/hopglass/hopglass-server
 
 
-##fastd
+## fastd
 user der fastd ausführt muss netzwerkschnittstellen erstellen können(zb root)
 
 fastd.conf muss nach /etc/fastd/_username_der_fastd_startet_/
@@ -60,7 +60,7 @@ fastd@.service ---> /lib/systemd/system/fastd@.service
 
 systemctl enable fastd@_username_der_fastd_startet_.service
 
-##batman compat14 version 2013.4 erzwingen
+## batman compat14 version 2013.4 erzwingen
 
 echo "deb http://repo.universe-factory.net/debian/ sid main" >>/etc/apt/sources.list
 
@@ -92,9 +92,9 @@ batman-adv ---> /etc/modules
 /opt/hopglass/hopglass/build/* kopieren nach /var/www/html
 
 
-##Prometheus und Grafana einrichten
+## Prometheus und Grafana einrichten
 
-#für neuere grafana+prometheus
+# für neuere grafana+prometheus
 
 http://grafana.org/download/
 
@@ -105,12 +105,12 @@ http://grafana.org/download/
 [https://packages.debian.org/testing/net/libjs-eonasdan-bootstrap-datetimepicker libjs-eonasdan-bootstrap-datetimepicker]
 
 
-#systemd autostart
+# systemd autostart
 systemctl enable grafana-server
 systemctl enable prometheus
 
 
-#Prometheus und Grafana Webinterface einrichten:
+# Prometheus und Grafana Webinterface einrichten:
 
 Prometheus: http://localhost:9090
 
@@ -145,7 +145,7 @@ Data source is working
 Wenn alles Grün ist klicken wir auf ,,Save"
 
 
-##Grafana Dashboard Importieren
+## Grafana Dashboard Importieren
 Auf ,,Home" klicken und hatt man eine uebersicht über die Dashboards und klickt auf ,,Importieren"
 
 Nun auf ,,Durchsuchen..." klicken und eine die Datei auswählen und rechts unten auf den Grünen boutton ,,Import" klicken.
