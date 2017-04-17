@@ -16,7 +16,15 @@ Die angepassten configs finden sich in den jeweiligen Unterverzeichnissen.
 
 ## Issues
 
+#hopglass-server
 Zur Zeit müssen ggf. die MAC Adressen der Supernodes nach einer Änderung händisch in den hopglass-server eingepflegt werden. Dies funktioniert über die Datei [hopglass-server/alias.json](hopglass-server/alias.json)
+
+#grafana und systemd
+bei problemen mit grafana autostart über systemd
+
+/lib/systemd/system/grafana-server.service von https://github.com/grafana/grafana/blob/master/packaging/deb/systemd/grafana-server.service holen
+und
+sudo ln -s /lib/systemd/system/grafana-server.service /etc/systemd/system/grafana-server.service
 
 
 
