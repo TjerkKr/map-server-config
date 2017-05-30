@@ -5,11 +5,30 @@
 ### SYSTEM (debian etch) ###
 
 apt update
-apt install nginx nodejs npm ruby-sass prometheus grafana 
+apt install git nginx nodejs npm ruby-sass prometheus grafana
+
+###Install newer grafana / prometheus
+
+mkdir /opt/prometheus/
+cd /opt/prometheus/
+
+wget https://ftp.de.debian.org/debian/pool/main/j/jquery/libjs-jquery_3.1.1-2_all.deb
+wget https://ftp.de.debian.org/debian/pool/main/n/node-moment/libjs-moment_2.17.1+ds-1_all.deb
+wget http://ftp.de.debian.org/debian/pool/main/e/eonasdan-bootstrap-datetimepicker/libjs-eonasdan-bootstrap-datetimepicker_4.17.43-1_all.deb
+wget https://ftp.de.debian.org/debian/pool/main/p/prometheus/prometheus_1.6.2+ds-1_amd64.deb
+wget https://ftp.de.debian.org/debian/pool/main/p/prometheus-node-exporter/prometheus-node-exporter_0.13.0+ds-1+b2_amd64.deb
+sudo dpkg -i *
+cd -
+
+mkdir /opt/grafana
+cd /opt/grafana/
+wget https://s3-us-west-2.amazonaws.com/grafana-releases/master/grafana_4.4.0-7958pre1_amd64.deb
+sudo dpkg -i *
+cd -
 
 ### HOPGLASS-SERVER 
 
-wget https://raw.githubusercontent.com/plumpudding/hopglass-server/v0.1.3/scripts/bootstrap.sh; bash bootstrap.sh; rm bootstrap.sh
+wget https://raw.githubusercontent.com/hopglass/hopglass-server/master/scripts/bootstrap.sh; bash bootstrap.sh; rm bootstrap.sh
 # this step assumes that you have a bat0 interface. Otherwise change the config.json accordingly (e.g. to "br0")
 cp ./hopglass-server/*.json /etc/hopglass-server/default/
 systemctl start hopglass-server@default
