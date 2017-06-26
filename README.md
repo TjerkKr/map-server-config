@@ -92,6 +92,18 @@ batman-adv ---> /etc/modules
 /opt/hopglass/hopglass/build/* kopieren nach /var/www/html
 
 
+
+
+## (Debian 9) Falls bei der Instalation dirmngr Fehler auftreten folgendes ausführen:
+echo "deb deb http://ftp.de.debian.org/debian/ stretch main contrib non-free" >>/etc/apt/sources.list
+
+apt remove gnupg
+apt install --reinstall gnupg2
+apt install dirmngr
+
+
+
+
 ## Prometheus und Grafana einrichten
 
 ##für neuere grafana+prometheus
