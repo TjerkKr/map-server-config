@@ -42,6 +42,11 @@ org_role = Admin
 
 https://libraries.io/github/hopglass/hopglass-server
 
+## DNS
+nano /etc/resolv.conf
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+
 
 ## fastd
 user der fastd ausführt muss netzwerkschnittstellen erstellen können(zb root)
