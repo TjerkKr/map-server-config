@@ -42,8 +42,21 @@ org_role = Admin
 
 https://libraries.io/github/hopglass/hopglass-server
 
+## DNS
+nano /etc/resolv.conf
+nameserver 8.8.8.8
+nameserver 8.8.4.4
 
-## fastd
+
+
+## fastd und Batman
+
+apt-get install batctl fastd
+
+fastd --generate-key > /root/fastd-keys.pub.sec
+
+der Key muss in /etc/fastd/root/fastd.conf -> secret "put_fastd_secret_in_here";
+
 user der fastd ausführt muss netzwerkschnittstellen erstellen können(zb root)
 
 fastd.conf muss nach /etc/fastd/_username_der_fastd_startet_/
@@ -60,17 +73,20 @@ fastd@.service ---> /lib/systemd/system/fastd@.service
 
 systemctl enable fastd@_username_der_fastd_startet_.service
 
+
 ## batman compat14 version 2013.4 erzwingen
 
 echo "deb http://repo.universe-factory.net/debian/ sid main" >>/etc/apt/sources.list
 
-apt-get install apt-transport-https
+apt-get install apt-transport-https 
 
 gpg --keyserver pgpkeys.mit.edu --recv-key  16EF3F64CB201D9C
 
 gpg -a --export 16EF3F64CB201D9C | apt-key add -
 
 apt-get update
+
+apt-get install batctl fastd bridge-utils
 
 modinfo batman-adv (Batman Version prüfen)
 
@@ -82,14 +98,34 @@ dkms --force install batman-adv/2013.4.0
 
 modprobe batman-adv (falls falsche Version "rmmod batman-adv" und dann noch mal die beiden dkms befehle)
 
-dmesg (Kontrolle ob geladen und welche Version)
+dmesg oder 
 
+cat /sys/module/batman_adv/version (Quelle: https://wiki.freifunk.net/Freifunk_Stormarn:Gateway)
+
+oder batctl -v (Quelle: https://wiki.freifunk.net/Freifunk_Stormarn:Gateway)
+
+(Kontrolle ob geladen und welche Version)
+
+ 
+ 
 
 batman-adv ---> /etc/modules
 
 ##webserver kopieren
 
 /opt/hopglass/hopglass/build/* kopieren nach /var/www/html
+
+
+
+
+## (Debian 9) Falls bei der Instalation dirmngr Fehler auftreten folgendes ausführen:
+echo "deb deb http://ftp.de.debian.org/debian/ stretch main contrib non-free" >>/etc/apt/sources.list
+
+apt remove gnupg
+apt install --reinstall gnupg2
+apt install dirmngr
+
+
 
 
 ## Prometheus und Grafana einrichten
