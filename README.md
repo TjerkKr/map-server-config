@@ -60,17 +60,20 @@ fastd@.service ---> /lib/systemd/system/fastd@.service
 
 systemctl enable fastd@_username_der_fastd_startet_.service
 
+
 ## batman compat14 version 2013.4 erzwingen
 
 echo "deb http://repo.universe-factory.net/debian/ sid main" >>/etc/apt/sources.list
 
-apt-get install apt-transport-https
+apt-get install apt-transport-https 
 
 gpg --keyserver pgpkeys.mit.edu --recv-key  16EF3F64CB201D9C
 
 gpg -a --export 16EF3F64CB201D9C | apt-key add -
 
 apt-get update
+
+apt-get install batctl fastd bridge-utils
 
 modinfo batman-adv (Batman Version prüfen)
 
@@ -82,8 +85,16 @@ dkms --force install batman-adv/2013.4.0
 
 modprobe batman-adv (falls falsche Version "rmmod batman-adv" und dann noch mal die beiden dkms befehle)
 
-dmesg (Kontrolle ob geladen und welche Version)
+dmesg oder 
 
+cat /sys/module/batman_adv/version (Quelle: https://wiki.freifunk.net/Freifunk_Stormarn:Gateway)
+
+oder batctl -v (Quelle: https://wiki.freifunk.net/Freifunk_Stormarn:Gateway)
+
+(Kontrolle ob geladen und welche Version)
+
+ 
+ 
 
 batman-adv ---> /etc/modules
 
