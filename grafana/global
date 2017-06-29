@@ -63,12 +63,6 @@
             },
             {
               "targetBlank": true,
-              "title": "RRD-Statistiken",
-              "type": "absolute",
-              "url": "https://sstats.ffm.freifunk.net/host.php?h=uber.ffm.freifunk.net&p=exec"
-            },
-            {
-              "targetBlank": true,
               "title": "Wifi-Aliases",
               "type": "absolute",
               "url": "/hopglass/wifi-aliases.txt"
@@ -620,14 +614,5 @@
       "type": "dashboards",
       "url": ""
     },
-    {
-      "icon": "external link",
-      "tags": [],
-      "targetBlank": true,
-      "title": "ffm-RRD-stats",
-      "tooltip": "",
-      "type": "link",
-      "url": "https://sstats.ffm.freifunk.net/host.php?h=uber.ffm.freifunk.net&p=exec"
-    }
   ]
 }

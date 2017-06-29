@@ -2,10 +2,10 @@
   "dataPath": [
     "/hopglass/"
   ],
-  "siteName": "Freifunk Frankfurt",
+  "siteName": "Freifunk Flensburg",
   "mapSigmaScale": 0.5,
-  "showContact": true,
-  "maxAge": 14,
+  "showContact": false,
+  "maxAge": 7,
   "mapLayers": [
     { "name": "OpenStreetMap.HOT" },
     { "name": "OpenStreetMap.Mapnik" },
@@ -14,7 +14,7 @@
     { "name": "Esri.WorldImagery" }
   ],
   "siteNames": [
-    { "site": "ffffm", "name": "Freifunk Frankfurt" }
+    { "site": "fffl", "name": "Freifunk Flensburg" }
   ],
   "hwImg": [
     { "thumbnail": "https://cdn.rawgit.com/Moorviper/meshviewer_hwpics/master/nodes/{MODELHASH}.svg", "caption": "Knoten {MODELHASH}" }
