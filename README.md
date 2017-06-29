@@ -48,7 +48,15 @@ nameserver 8.8.8.8
 nameserver 8.8.4.4
 
 
-## fastd
+
+## fastd und Batman
+
+apt-get install batctl fastd
+
+fastd --generate-key > /root/fastd-keys.pub.sec
+
+der Key muss in /etc/fastd/root/fastd.conf -> secret "put_fastd_secret_in_here";
+
 user der fastd ausführt muss netzwerkschnittstellen erstellen können(zb root)
 
 fastd.conf muss nach /etc/fastd/_username_der_fastd_startet_/
