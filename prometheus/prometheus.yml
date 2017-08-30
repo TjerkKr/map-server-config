@@ -27,22 +27,22 @@ scrape_configs:
     # metrics_path defaults to '/metrics'
     # scheme defaults to 'http'.
 
-    target_groups:
+    static_configs:
       - targets: ['localhost:9090']
 
   - job_name: node
     # If prometheus-node-exporter is installed, grab stats about the local
     # machine by default.
-    target_groups:
+    static_configs:
       - targets: ['localhost:9100']
 
   - job_name: node_map
     scrape_interval: 60s
     scrape_timeout: 15s
     metrics_path: /hopglass/metrics
-    target_groups:
+    static_configs:
       - targets: ['localhost']
   - job_name: pushgateway
     honor_labels: true
-    target_groups:
+    static_configs:
       - targets: ['localhost:9091']
